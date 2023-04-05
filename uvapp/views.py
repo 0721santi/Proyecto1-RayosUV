@@ -1,9 +1,10 @@
 from django.http import HttpResponse
 from .models import usuario
+from django.shortcuts import render
 # Create your views here.
 
 def init(request):
-    return HttpResponse("<h1>UV EYES.</h1>")
+    return render(request, 'index.html')
 
 def hello(request, user):
     try:
