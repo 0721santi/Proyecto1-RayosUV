@@ -7,5 +7,7 @@ La lista de librerías se encuentran disponibles en el archivo requirements.txt.
 Se requiere el interprete de Python y se recomienda el uso de MySQL Workbench si se desea ver los datos directamente.
 
 Después de haber instalado las librerías, Dirijase a la carpeta donde tiene el proyecto y ejecute los siguientes comandos:
-    .\venv\Scripts\activate (Para activar el entorno virtual).
-    python manage.py runserver (Para ejecutar el servidor y poder interactuar con la APP).
+
+1. .\venv\Scripts\activate (Para activar el entorno virtual).
+
+2. python manage.py runserver (Para ejecutar el servidor y poder interactuar con la APP).
