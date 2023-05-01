@@ -1,23 +1,35 @@
 from django.http import HttpResponse
 from .models import usuario, busqueda
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import registro, inicio
 # Create your views here.
 
 def init(request):
     return render(request, 'index.html')
-
-def hello(request, user):
-    try:
-        usuario.objects.get(name=user)
-    except:
-        return HttpResponse("<h1>Usted no es un usuario registrado</h1>")
-    else:
-        return HttpResponse("<h1>Bienvenido %s.</h1>"%user)
-
+def reguser(request):
+    return render(request, 'loggedin.html')
 def historial(request):
-    names = usuario.objects.all()
-    busquedas = busqueda.objects.all()
-    return render(request, 'historial.html', {
-        'nombres':names,
-        'busquedas':busquedas
+    return render(request, 'backend/historial.html')
+def login(request):
+    if request.method == 'GET':
+        return render(request, 'backend/inicio.html', {
+        "form": inicio()
     })
+    else:
+        try:
+            usuario.objects.get(surname=request.POST['usuario'], password=request.POST['contrasena'])
+        except:
+            HttpResponse("<h1>Usuario incorrecto</h1>")
+            return redirect('inicio.html')
+        else:
+            return redirect('../loggedin.html')
+        
+def singup(request):
+    if request.method == 'GET':
+        return render(request, 'backend/registro.html', {
+        "form": registro()
+    })
+    else:
+        usuario.objects.create(surname=request.POST['usuario'],password=request.POST['contrasena'], name=request.POST['nombre'], lastname=request.POST['apellido'], location=request.POST['ciudad'], age=request.POST['edad'])
+        return redirect('../loggedin.html')
+

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<enlace rel="preconectar" href="https://fonts.googleapis.com">
+		<enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+		<enlace href="https: //fonts.googleapis.com/css2? family= Inter:wght@300 & display=swap" rel="stylesheet">
+	<title>Inicio</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{% static 'style/stylein.css' %}">
+</head>
+<body>
+    <header>
+        <div id="#inicio" class="hea">
+            <img src="{% static 'img/logo2.png' %}" href="../index.html" alt="Logo" >
+            <div class="atr"> 
+                <a href="../index.html">Atras</a>
+            </div>
+        </div>
+        <nav class="nav1">
+
+        </nav>
+    </header>
+    <div class="contenedor">
+		<section class="main">
+            <h1>UV-Eyes</h1>
+            <div class="ini">
+            <h2>Iniciar sesion</h2>
+            <form method="POST" class="formulario">
+				{% csrf_token %}
+				{{form.as_p}}
+				<button>
+					Continuar
+				</button>
+            </form> 
+        </div>
+        </section>
+    </div>
+</body>
+<footer>
+	<div class="contactos">
+		<div class="col1">
+			<p>Contáctanos</p>
+
+			<p>EAFIT Medellín</p>
+			<p>Carrera 49 N° 7 Sur-50</p>
+			<p>Línea nacional: 01 8000 515 900</p>
+			<p>Línea de atención (57) 604 2619500</p>
+			<p>Whatsapp: (57) 310 8992908</p>
+			<p>Centro de Visitantes</p>
+			<p>EAFIT Pereira Carrera 19 #12-70 Megacentro Pinares(57) 606 3214115, 606 3214119</p>
+			<p>EAFIT Bogotá Carrera 21 #87-85(57) 601 6114618</p>
+			<p>EAFIT Llanogrande Km 3.5 vía Don Diego –Rionegro</p>
+		</div>
+		<div class="col2">
+			<p>Conéctate con EAFIT</p>
+
+			<p>Inscríbete en un programa​</p>
+			<p>Pregrados​</p>
+			<p>Posgrados</p>
+			<p>Programas virtuales</p>
+			<p>Idiomas</p>
+			<p>Cursos, diplomados y seminarios</p>
+			<p>Alta Dirección</p>
+			<p>Para mayores de 50</p>
+			<p>Universidad de los Niños</p>
+			<p>Ciencia, tecnología e innovación</p>
+			<p>Centros de estudio</p>
+			<p>Filantropía</p>
+			<p>Empresas</p>
+			<p>Sistemas públicos</p>
+			<p>Ecosistema de emprendimiento</p>
+			<p>Trabaja con nosotros</p>
+		</div>
+		<div class="col3">
+			<p>Sobre nosotros</p>
+
+			<p>Biblioteca</p>
+			<p>Tarifas</p>
+			<p>Personería jurídica</p>
+			<p>Reglamentos y estatutos</p>
+			<p>Línea de transparencia​</p>
+			<p>Preguntas frecuentes</p>
+			<p>Registra una PQRSF</p>
+			<p>Gén​ero, Diversidad ​e I​nclusión</p>
+			<p>Notificaciones judiciales y certificados</p>
+			<p>Actualiza tus datos</p>
+			<p>Política de protección de datos</p>
+			<p>Términos de uso</p>
+			<p>Más Información Institucional</p>
+		</div>
+	</div>
+	<p class="copr">© 2023 Copyright: UV-EYES</p>
+</footer>
+</html>

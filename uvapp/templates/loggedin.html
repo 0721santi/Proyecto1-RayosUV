@@ -8,15 +8,14 @@
 		<enlace href="https: //fonts.googleapis.com/css2? family= Inter:wght@300 & display=swap" rel="stylesheet">
 	<title>Inicio</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="{% static 'style/styleindex2.css' %}">
+	<link rel="stylesheet" href="{% static 'style/style.css' %}">
 </head>
 <body>
 	<header>
 			<div id="#inicio" class="hea">
 				<img src="{% static 'img/logo2.png' %}" alt="Logo">
 				<div class="reg">
-					<a href="backend/inicio.html">Iniciar sesion</a>
-					<a href="backend/registro.html">Registrarse</a>
+					<a href="index.html">Cerrar sesion</a>
 				</div>
 			</div>
 			<nav class="nav1">
@@ -24,7 +23,7 @@
 				 <ul>
 					<li><a href="#inicio">Inicio</a></li>
 					<li><a href="#info">Info. relevante</a></li>
-					
+					<li><a href="backend/historial.html">Historial</a></li>
 					<li><a href="#reco">Recomendaciones</a></li>
 					<li><a href="#cont">Contacto</a></li>
 				</ul> 
@@ -33,9 +32,9 @@
 	<div class="contenedor">
 		
 		<section class="main">
-			<h1>UV-Eyes</h1> 
+			<h1>UV-Eyes</h1>
 			<div class="inicio">
-				
+				 
 				<div class="img">	
 					<img src="{% static 'img/imgs.jpeg' %}" alt="Mapa">
 				</div>
@@ -60,7 +59,36 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</article>
 			</section>
-			
+			<!--<section class="hi">
+				<article id="hist">
+					<h2>Historial</h2>
+					<h3>Ultimos lugares visitados</h3>
+					<img src="img/mpej.png" alt="Mapa del historial">
+					<h3>Recorrido</h3>
+					<table>
+						<tr>
+							<th>Ciudad</th>
+							<th>Lugares</th>
+							<th>Nivel de radiacion</th>
+						</tr>
+						<tr>
+							<th>Medellin</th>
+							<th>U. EAFIT</th>
+							<th>4</th>
+						</tr>
+						<tr>
+							<th>Marinilla</th>
+							<th>Parque</th>
+							<th>6</th>
+						</tr>
+						<tr>
+							<th>Poblado</th>
+							<th>CC el Tesororo</th>
+							<th>7</th>
+						</tr>
+					</table>
+				</article>
+			</section>!-->
 			<section class="rec">
 				<article id="reco">
 					<h2>Recomendaciones</h2>
@@ -134,7 +162,6 @@
 			<p>Términos de uso</p>
 			<p>Más Información Institucional</p>
 		</div>
-		
 	</div>
 	<p class="copr">© 2023 Copyright: UV-EYES</p>
 </footer>
