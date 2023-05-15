@@ -12,6 +12,8 @@ def reguser(request):
     return render(request, 'loggedin.html')
 def historial(request):
     return render(request, 'backend/historial.html')
+def resultado(request):
+    return render(request, 'backend/resultado.html')
 def busqueda(request):
     if request.method == 'GET':
         return render(request, 'backend/busqueda.html', {
@@ -29,8 +31,7 @@ def busqueda(request):
         lat = t['latitude']
         lon = t['longitude']
         print("Latitud: ",lat,", Longitud: ",lon)
-        HttpResponse(lat, lon)
-        return redirect('../loggedin.html')
+        return redirect('resultado.html')
 def login(request):
     if request.method == 'GET':
         return render(request, 'backend/inicio.html', {

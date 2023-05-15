@@ -8,4 +8,5 @@ urlpatterns = [
     path('loggedin.html', views.reguser),
     path('backend/busqueda.html', views.busqueda),
     path('backend/historial.html',views.historial),
+    path('backend/resultado.html', views.resultado)
 ]
