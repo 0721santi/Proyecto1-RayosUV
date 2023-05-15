@@ -35,15 +35,31 @@ header {
 .nav1 {
     margin: 0px auto;
     background: black; 
+    text-align: center;
     width: 100%; 
-    height: 15px;
-    
- 
 }
+
 .nav1 ul {
     list-style: none;
     overflow: hidden; 
     
+}
+.nav1 ul li {
+    float:  left;
+    width: 25%;
+    flex: auto;
+}
+.nav1 ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 19px;
+}
+.nav1 ul li a:hover {
+    background: #ffffff98;
+    color: #000000; 
 }
 
 
@@ -66,29 +82,21 @@ header {
     font-size: 40px;
 }
 
-.reg {
+.bus {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 10%;
     border: 3px solid #000000;
 }
-.reg h2{
+.bus h2{
     background: rgb(0, 0, 156);
     color: #ffffff;
     text-align: center;
     height: 40px;
 }
-.reg input{
-    width: 70%;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.reg button{
-    margin-left: 50%;
-    margin-right: 15px;
-    margin-bottom: 15px;
+.bus h3{
+    margin: 10px;
 }
 
 /*footer*/
@@ -97,6 +105,7 @@ header {
     width: 100%;
     column-count: 3;
     background: #000c96;
+
 }
 .col1{
     margin: 3%;

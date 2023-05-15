@@ -8,25 +8,24 @@
 		<enlace href="https: //fonts.googleapis.com/css2? family= Inter:wght@300 & display=swap" rel="stylesheet">
 	<title>Inicio</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="{% static 'style/stylein.css' %}">
+	<link rel="stylesheet" href="{% static 'style/stylebus.css'%}">
 </head>
 <body>
     <header>
         <div id="#inicio" class="hea">
-            <img src="{% static 'img/logo2.png' %}" href="../index.html" alt="Logo" >
-            <div class="atr"> 
+            <img src="{% static '/img/logo2.png' %}" href="../index.html" alt="Logo" >
+            <div class="atr">  
                 <a href="../index.html">Atras</a>
             </div>
         </div>
         <nav class="nav1">
-
         </nav>
     </header>
     <div class="contenedor">
 		<section class="main">
             <h1>UV-Eyes</h1>
-            <div class="ini">
-            <h2>Iniciar sesion</h2>
+            <div class="bus">
+            <h2>Búsqueda</h2>
 			<form method="POST" class="formulario">
 				{% csrf_token %}
 				{{form.as_p}}

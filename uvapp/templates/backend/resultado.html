@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,31 +7,33 @@
 		<enlace href="https: //fonts.googleapis.com/css2? family= Inter:wght@300 & display=swap" rel="stylesheet">
 	<title>Inicio</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="{% static 'style/stylein.css' %}">
+	<link rel="stylesheet" href="../style/styleresul.css">
 </head>
 <body>
     <header>
         <div id="#inicio" class="hea">
-            <img src="{% static 'img/logo2.png' %}" href="../index.html" alt="Logo" >
-            <div class="atr"> 
-                <a href="../index.html">Atras</a>
+            <img src="../img/logo2.png" href="../index.html" alt="Logo" >
+            <div class="atr">  
+                <a href="../index2.html">Atras</a>
             </div>
         </div>
         <nav class="nav1">
-
-        </nav>
+            <ul>
+               <li><a href="../index.html">Inicio</a></li>
+               <li><a href="backend/busqueda.html">Busqueda</a></li>
+               <li><a href="historial.html">Historial</a></li>
+               <li><a href="#cont">Contacto</a></li>
+           </ul> 
+       </nav>
     </header>
     <div class="contenedor">
 		<section class="main">
             <h1>UV-Eyes</h1>
-            <div class="ini">
-            <h2>Iniciar sesion</h2>
-			<form method="POST" class="formulario">
-				{% csrf_token %}
-				{{form.as_p}}
-				<button>
-					Continuar
-				</button>
+            <div class="bus">
+            <h2>El resultado de tu búsqueda es</h2>
+            <form action="###por definir####" method="POST" class="formulario">
+                <h3>Sitio=#</h3>
+                <h3>Radiacion=#</h3>
             </form> 
         </div>
         </section>

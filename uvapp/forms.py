@@ -10,4 +10,5 @@ class registro(forms.Form):
 class inicio(forms.Form):
     usuario = forms.CharField(label="Usuario",max_length=100)
     contrasena = forms.CharField(label="Contraseña", max_length=50)
-
+class busqueda(forms.Form):
+    posicion = forms.CharField(label="Posicion de busqueda",max_length=100)
