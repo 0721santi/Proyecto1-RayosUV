@@ -28,6 +28,7 @@ def busqueda(request):
         t = response.json()
         lat = t['latitude']
         lon = t['longitude']
+        print("Latitud: ",lat,", Longitud: ",lon)
         HttpResponse(lat, lon)
         return redirect('../loggedin.html')
 def login(request):
