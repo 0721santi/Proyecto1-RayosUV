@@ -14,8 +14,8 @@ def historial(request):
     return render(request, 'backend/historial.html')
 def busqueda(request):
     if request.method == 'GET':
-        return render(request, 'busqueda.html', {
-            "form": busqueda()
+        return render(request, 'backend/busqueda.html', {
+        "form": busqueda()
     })
     else:
         url = "https://google-maps-geocoding3.p.rapidapi.com/geocode"
