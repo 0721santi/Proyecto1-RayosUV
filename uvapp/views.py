@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from .models import usuario, busqueda
 from django.shortcuts import render, redirect
-from .forms import registro, inicio, busqueda
+from .forms import registro, inicio, lugar
 import requests
 import json
 # Create your views here.
@@ -15,7 +15,7 @@ def historial(request):
 def busqueda(request):
     if request.method == 'GET':
         return render(request, 'backend/busqueda.html', {
-        "form": busqueda()
+        "form": lugar()
     })
     else:
         url = "https://google-maps-geocoding3.p.rapidapi.com/geocode"
@@ -28,7 +28,7 @@ def busqueda(request):
         t = response.json()
         lat = t['latitude']
         lon = t['longitude']
-        HttpResponse("<h1>Estás en ",request.POST['posicion']," que equivale a: Latitud ",lat," y longitud ",lon)
+        HttpResponse(lat, lon)
         return redirect('../loggedin.html')
 def login(request):
     if request.method == 'GET':
