@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from .models import usuario, busqueda
 from django.shortcuts import render, redirect
 from .forms import registro, inicio
+import requests
+import json
 # Create your views here.
 
 def init(request):
@@ -32,4 +34,32 @@ def singup(request):
     else:
         usuario.objects.create(surname=request.POST['usuario'],password=request.POST['contrasena'], name=request.POST['nombre'], lastname=request.POST['apellido'], location=request.POST['ciudad'], age=request.POST['edad'])
         return redirect('../loggedin.html')
+def posreq(request):
+    url = "https://google-maps-geocoding3.p.rapidapi.com/geocode"
+    querystring = {"address":"Medellin"}
+    headers = {
+	    "X-RapidAPI-Key": "9b5f56befdmsh35a4a3652de3a8bp1926f7jsnc2eb2fb639a5",
+	    "X-RapidAPI-Host": "google-maps-geocoding3.p.rapidapi.com"
+    }
+    response = requests.get(url, headers=headers, params=querystring)
+    t = response.json()
+    lat = t['latitude']
+    lon = t['longitude']
+    response = "https://api.meteomatics.com/2023-05-15T00:00:00Z/direct_rad:W/",lat,",",lon,"/html"
+    return HttpResponse(response)
+def uvIndex(request):
+    try:
+        url = "https://uv-index3.p.rapidapi.com/uv-index"
 
+        querystring = {"lat":"6.2476376","lon":"-75.5658153"}
+
+        headers = {
+	        "X-RapidAPI-Key": "9b5f56befdmsh35a4a3652de3a8bp1926f7jsnc2eb2fb639a5",
+	        "X-RapidAPI-Host": "uv-index3.p.rapidapi.com"
+        }
+
+        response = requests.get(url, headers=headers, params=querystring)
+
+        print(response.json())
+    except:
+        return HttpResponse("<h1>Usuario incorrecto</h1>")

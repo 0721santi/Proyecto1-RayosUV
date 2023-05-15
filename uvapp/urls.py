@@ -6,5 +6,6 @@ urlpatterns = [
     path('backend/inicio.html', views.login),
     path('backend/registro.html', views.singup),
     path('loggedin.html', views.reguser),
-    path('backend/historial.html',views.historial)
+    path('backend/historial.html',views.historial),
+    path('prueba.html', views.uvIndex)
 ]
